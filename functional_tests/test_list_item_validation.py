@@ -58,7 +58,7 @@ class ItemValidationTest(FunctionalTest):
 
 		#他看到错误消失了，很高兴
 		error = self.get_error_element()
-		self.assertTrue(error.is_displayed())
+		self.assertFalse(error.is_displayed())
 
 	def get_error_element(self):
 		return self.browser.find_element_by_css_selector('.has-error')
